@@ -26,3 +26,7 @@ command /chat:
     trigger:
         send "「&6匿名DM&eシステム&r」&7制作:Yuwaka(Hakase) v1"
         send "このチャットシステムでは「&c一切内容がログに残らず、安全です。&r」Lunachatを使用すると、ログが残ってしまいますが、ログが残らないようになっています。" to player
+command /helpchat:
+    permission: op
+    trigger:
+        send "うまく動かない場合は、LunachatのConfigからLunachatの優先度を下げてください。"
