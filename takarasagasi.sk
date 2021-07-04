@@ -10,7 +10,7 @@ command /takaragame <text> <text>:
     permission: op
     trigger:
         if arg-1 is "help":
-            send "&a/takaragame gen <ワールド数値> &rでワールド準備(準備したらたからどこかに設置してね)" to player
+            send "&a/takaragame gen <ワールド数値> &rでワールド準備(準備したらたからどこかに設置してね)(プレイヤーに棒を配布してください)" to player
             send "&a/takaragame yobikake kite &rでゲーム宣伝" to player
             send "&a/takaragame start go &rでゲーム開始" to player
         if arg-1 is "gen":
@@ -38,6 +38,6 @@ command /takaragame <text> <text>:
             broadcast "村人から依頼が来ている... ▼"
             broadcast "村人&a: &rどうしよう...！今日プロポーズするのにダイヤブロックがない..！"
             wait 1 secound
-            broadcast "村人&a: &rお願い...そこの君！このままだと親にも同僚とかにもいじられて精神的にきつい...！頼んだ！ダイヤブロックを探してくれ！(人任せ)"
+            broadcast "村人&a: &rお願い...そこの君！このままだと親にも同僚とかにもいじられて精神的にきつい...！頼んだ！ダイヤブロックを探してくれ！棒を持って右クリックで見つけたものを知らせてくれ！(人任せ)"
             wait 1 secound
             broadcast "ミッション ダイヤモンドブロックを探せ ▼"
