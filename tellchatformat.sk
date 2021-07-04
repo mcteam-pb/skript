@@ -1,0 +1,28 @@
+command /tell <player> <text>:
+    trigger:
+        send "&a%player%さんからDMです" to %arg-1%
+        send "%arg-2%" to %arg-1%
+        send "&a%arg-1%さんへDMを送信しました" to player
+        send "%arg-2%" to player
+command /w <player> <text>:
+    trigger:
+        send "&a%player%さんからDMです" to %arg-1%
+        send "%arg-2%" to %arg-1%
+        send "&a%arg-1%さんへDMを送信しました" to player
+        send "%arg-2%" to player
+command /mail <player> <text>:
+    trigger:
+        send "&a%player%さんからDMです" to %arg-1%
+        send "%arg-2%" to %arg-1%
+        send "&a%arg-1%さんへDMを送信しました" to player
+        send "%arg-2%" to player
+command /dm <player> <text>:
+    trigger:
+        send "&a%player%さんからDMです" to %arg-1%
+        send "%arg-2%" to %arg-1%
+        send "&a%arg-1%さんへDMを送信しました" to player
+        send "%arg-2%" to player
+command /chat:
+    trigger:
+        send "「&6匿名DM&eシステム&r」&7制作:Yuwaka(Hakase) v1"
+        send "このチャットシステムでは「&c一切内容がログに残らず、安全です。&r」Lunachatを使用すると、ログが残ってしまいますが、ログが残らないようになっています。" to player
