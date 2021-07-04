@@ -1,0 +1,69 @@
+command /lunanickchat <text> <text>:
+    permission: op
+    trigger:
+        if arg-1 is "-help":
+            send "&c/lunanickchat <プレイヤー名> <内容>" to player
+            send "&c/lnc <プレイヤー名> <内容>" to player
+        else:
+            broadcast "%arg-1%&a: %arg-2%"
+command /lnc <text> <text>:
+    permission: op
+    trigger:
+        if arg-1 is "-help":
+            send "&c/lunanickchat <プレイヤー名> <内容>" to player
+            send "&c/lnc <プレイヤー名> <内容>" to player
+        else:
+            broadcast "%arg-1%&a: %arg-2%"
+command /nickchat <text> <text>:
+    permission: op
+    trigger:
+        if arg-1 is -help:
+            send "&c/nickchat <プレイヤー名> <内容>" to player
+            send "&c/nc <プレイヤー名> <内容>" to player
+        else:
+            broadcast "<%arg-1%> %arg-2%"
+command /nc <text> <text>:
+    permission: op
+    trigger:
+        if arg-1 is -help:
+            send "&c/nickchat <プレイヤー名> <内容>" to player
+            send "&c/nc <プレイヤー名> <内容>" to player
+        else:
+            broadcast "<%arg-1%> %arg-2%"
+command /fly <text>:
+    permission: op
+    trigger:
+        if arg-1 is "true":
+            set player's flight mode to true
+            send "&4[&cHakaseSK&4] &rFly &cOn!"
+        if arg-1 is "false":
+            set player's flight mode to false
+            send "&4[&cHakaseSK&4] &rFly &7Off!"
+        if arg-1 is "-help":
+            send "&c/fly true &rでフライ"
+            send "&c/fly false &rでフライをオフ"
+command /announse <text>:
+    permission: op
+    trigger:
+        broadcast "&4[&cアナウンス&4] &r%arg-1%"
+command /an <text>:
+    permission: op
+    trigger:
+        broadcast "&4[&cアナウンス&4] &r%arg-1%"
+command /settext <text>:
+    permission: op
+    trigger:
+        {settext} = %ar-1%
+command /saytext:
+    permission; op
+        broadcast "&9[&e定期&9] &r{settext}"
+command /hakasesk:
+    permission: op
+    trigger:
+        send "&eHakase&6SK &7v0.0.1" to player
+        send "&7作成:Hakase" to player
+        send "" to player
+        send "&a/lunachatnick -help &9→ &rLunaChatの形式で架空のプレイヤー名などで発言ができます。" to player
+        send "&a/chatnick -help &9→ &r架空のプレイヤー名などで発言ができます。" to player
+        send "&a/fly -help &9→ &rフライをオンオフ切り替えができます"
+        send "&a/announse <内容> &9→ &rアナウンスを流します"
