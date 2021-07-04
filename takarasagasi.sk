@@ -1,0 +1,43 @@
+on rightclick with stick:
+    if world is "takarasagasi":
+        block is a diamond_block
+        send "村人&a: &rありがとう..!これだよこれ!" to player
+        broadcast "&6[&e勝者&6] &c%player% がお宝を発見しました！"
+        broadcast "%player% は進捗 &a[お宝マスター！？] &rを達成した"
+        execute console command "mv remove takarasagasi"
+        execute console command "mvconfirm"
+command /takaragame <text> <text>:
+    permission: op
+    trigger:
+        if arg-1 is "help":
+            send "&a/takaragame gen <ワールド数値> &rでワールド準備(準備したらたからどこかに設置してね)" to player
+            send "&a/takaragame yobikake kite &rでゲーム宣伝" to player
+            send "&a/takaragame start go &rでゲーム開始" to player
+        if arg-1 is "gen":
+            execute console command "mv clone takara%arg-2% takarasagasi"
+            broadcast "Server &9>> &6宝探しワールドのサーバーが準備できました"
+        if arg-1 is "yobikake":
+            broadcast "&6宝探し、&rしてみない？"
+            broadcasy "今から宝探しゲー見を開始します。是非参加してください。"
+        if arg-1 os "start":
+            broadcast "&6Count &cStart"
+            wait 1 secound
+            broadcast "&65"
+            wait 1 secound
+            broadcast "&64"
+            wait 1 secound
+            broadcast "&63"
+            wait 1 secound
+            broadcast "&62"
+            wait 1 secound
+            broadcast "&61"
+            wait 1 secound
+            broadcast "&c&nStart! &7(Host by %player%)"
+            broadcast "&7不具合などがあった場合%player%に伝えてください。できるだけ回答します。"
+            wait 3 secound
+            broadcast "村人から依頼が来ている... ▼"
+            broadcast "村人&a: &rどうしよう...！今日プロポーズするのにダイヤブロックがない..！"
+            wait 1 secound
+            broadcast "村人&a: &rお願い...そこの君！このままだと親にも同僚とかにもいじられて精神的にきつい...！頼んだ！ダイヤブロックを探してくれ！(人任せ)"
+            wait 1 secound
+            broadcast "ミッション ダイヤモンドブロックを探せ ▼"
