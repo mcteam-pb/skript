@@ -53,10 +53,26 @@ command /an <text>:
 command /settext <text>:
     permission: op
     trigger:
-        {settext} = %ar-1%
+        set {test} to %arg-1%
 command /saytext:
-    permission; op
+    permission: op
         broadcast "&9[&e定期&9] &r{settext}"
+command /sintyoku <player> <text>:
+    permission: op
+    trigger:
+        broadcast "%arg-1% は進捗 &a[%arg-1] &rを達成した%"
+command /setpos:
+    trigger:
+        set {setpoint.%player%} to location of player
+        send "&a座標を保存しました" to player
+command /tppos:
+    trigger:
+        teleport player to {setpoint.%player%}
+        send "&a保存された場所にtpしました" to player
+
+使いたい人はこの文字消してねon damage:
+    sned "&c%attacker%に殴られました！"  to player
+
 command /hakasesk:
     permission: op
     trigger:
@@ -65,5 +81,8 @@ command /hakasesk:
         send "" to player
         send "&a/lunachatnick -help &9→ &rLunaChatの形式で架空のプレイヤー名などで発言ができます。" to player
         send "&a/chatnick -help &9→ &r架空のプレイヤー名などで発言ができます。" to player
-        send "&a/fly -help &9→ &rフライをオンオフ切り替えができます"
-        send "&a/announse <内容> &9→ &rアナウンスを流します"
+        send "&a/fly -help &9→ &rフライをオンオフ切り替えができます" to player
+        send "&a/announse <内容> &9→ &rアナウンスを流します" to player
+        send "&a/sintyoku <プレイヤー名> <内容> &9→ &r進捗を自分で作れます" to player
+        send "&a/setpos &9→ &r座標を登録します" to player
+        send "&a/tppos &9→ &r登録した座標にtpします" to player
